@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>家庭理财系统</title>
+        <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        {include file="common/top" /}
+		<div class="container">
+			<div class="page-header">
+			    <h1>家庭成员
+			        <small>添加成员</small>
+			    </h1>
+			</div>
+		</div>
+		<div class="container" >
+			<div class="row" >
+				<div class="col-xs-12" >
+					<form action="/family/public/index/Member/add_member" method="post" class="form-horizontal" role="form">
+					    <div class="form-group">
+                            <label class="col-sm-2 control-label" for="member_name">姓名:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" name="member_name"  >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="member_birthday">生日:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="date" name="member_birthday"  >
+                            </div>
+                        </div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="member_sex">性别:</label>
+							<div class="col-sm-10" style="text-align:left;">
+                                <label class="radio-inline">
+		                            <input type="radio" name="member_sex" id="optionsRadios3" value="男" checked> 男
+	                            </label>
+                            	<label class="radio-inline">
+                            		<input type="radio" name="member_sex" id="optionsRadios4"  value="女"> 女
+                            	</label>
+						    </div>
+					    </div>
+
+					    <button type="submit" class="btn btn-primary" style="margin:0 auto; display:block;">添加</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+    </body>
+</html>
