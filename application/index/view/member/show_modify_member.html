@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="page-header">
 			    <h1>家庭成员
-			        <small>添加成员</small>
+			        <small>修改信息—{$members[0]["member_name"]}</small>
 			    </h1>
 			</div>
 		</div>
@@ -24,53 +24,52 @@
 					    <div class="form-group">
                             <label class="col-sm-2 control-label" for="member_name">姓名:</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" name="member_name"  >
+                                <input class="form-control" type="text" name="member_name" value="{$members[0]["member_name"]}"  >
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="member_birthday">生日:</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="date" name="member_birthday"  >
+                                <input class="form-control" type="date" name="member_birthday"   value="{$members[0]["member_birthday"]}" >
                             </div>
                         </div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="member_sex">性别:</label>
 							<div class="col-sm-10" style="text-align:left;">
                                 <label class="radio-inline">
-		                            <input type="radio" name="member_sex" id="optionsRadios3" value="男" checked> 男
+		                            <input type="radio" name="member_sex" value="男" checked> 男
 	                            </label>
                             	<label class="radio-inline">
-                            		<input type="radio" name="member_sex" id="optionsRadios4"  value="女"> 女
+                            		<input type="radio" name="member_sex" value="女"> 女
                             	</label>
 						    </div>
 					    </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="member_company">所在单位:</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" name="member_company"  >
+                                <input class="form-control" type="text" name="member_company"   value="{$members[0]["member_company"]}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="member_job">职业:</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" name="member_job"  >
+                                <input class="form-control" type="text" name="member_job"   value="{$members[0]["member_job"]}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="member_nation">民族:</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" name="member_nation"  >
+                                <input class="form-control" type="text" name="member_nation"  value="{$members[0]["member_nation"]}" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="member_photo">头像</label>
                             <div class="col-sm-10">
-                                <input class=""  type="file" name="member_photo">
+                                <input class=""  type="file" name="member_photo" >
                             </div>
                         </div>
 
-
-					    <button type="submit" class="btn btn-primary" style="margin:0 auto; display:block;">添加</button>
+					    <button type="submit" class="btn btn-primary" style="margin:0 auto; display:block;">确认修改</button>
 					</form>
 				</div>
 			</div>

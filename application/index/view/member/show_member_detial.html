@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>家庭理财系统</title>
+        <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        {include file="common/top" /}
+		<div class="container">
+			<div class="page-header">
+			    <h1>家庭成员
+			        <small>详细信息—{$members[0]["member_name"]}</small>
+			    </h1>
+			</div>
+		</div>
+		<div class="container" >
+			<div class="row" >
+                {include file="common/left" /}
+                <div class="col-xs-12 col-sm-9" >
+                    <div class="row">
+                        <h3 class="text-left col-xs-12" style="margin:10 0 20 0;">基本信息</h3><br>
+        				<div class="baseinfo col-xs-7 col-sm-10" >
+                            <table class="table">
+                               <tbody>
+                                  <tr>
+                                     <td>姓名:</td>
+                                     <td>{$members[0]["member_name"]}</td>
+                                  </tr>
+                                  <tr>
+                                     <td>年龄:</td>
+                                     <td>{$members[0]["member_birthday"]}</td>
+                                  </tr>
+                                  <tr>
+                                     <td>民族:</td>
+                                     <td>{$members[0]["member_nation"]}</td>
+                                  </tr>
+                                  <tr>
+                                     <td>单位:</td>
+                                     <td>{$members[0]["member_company"]}</td>
+                                  </tr>
+                                  <tr>
+                                     <td>职业:</td>
+                                     <td>{$members[0]["member_job"]}</td>
+                                  </tr>
+                               </tbody>
+                            </table>
+        				</div>
+                        <div class="photo col-xs-5 col-sm-2" >
+                            <img src="/family/public/uploads/{$members[0]["member_photo"]}" class="img-rounded img-responsive">
+        				</div>
+                        <h3 class="text-left col-xs-12 " style="margin:10 0 20 0;">消费信息</h3><br>
+                        <div class="dynimic col-xs-12" >
+                            <table class="table">
+                               <tbody>
+                                  <tr>
+                                     <td>收入:</td>
+                                     <td>30000</td>
+                                  </tr>
+                                  <tr>
+                                     <td>支出:</td>
+                                     <td>21</td>
+                                  </tr>
+                               </tbody>
+                            </table>
+        				</div>
+                    </div>
+                </div>
+		    </div>
+
+        </div>
+
+    </body>
+</html>

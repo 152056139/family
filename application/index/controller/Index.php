@@ -11,5 +11,5 @@ class Index extends Controller
 
         return $this->fetch();
     }
-    
+
 }

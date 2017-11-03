@@ -18,11 +18,13 @@
 		</div>
 		<div class="container" >
 			<div class="row" >
-				<div class="col-xs-12 table-responsive" >
+                {include file="common/left" /}
+				<div class="col-xs-12 col-sm-9 table-responsive" >
 					<table class="table table-condensed">
 						<thead>
 							<tr>
 								<th>编号</th>
+                                <th style="display:none">id</th>
 								<th>姓名</th>
 								<th>性别</th>
 								<th>生日</th>
@@ -30,16 +32,17 @@
 							</tr>
 						</thead>
 						<tbody>
-						{volist name="members", id="member" key="key"}
+						{volist name="members", id="member", key="key"}
 							<tr>
 								<td>{$key}</td>
+                                <td style="display:none">{$member['member_no']}</td>
 								<td>{$member['member_name']}</td>
 								<td>{$member['member_sex']}</td>
 								<td>{$member['member_birthday']}</td>
 								<td>
-									<a href=""><label>删除</label></a>	|
-									<a href=""><label>修改</label></a>	|
-									<a href=""><label>详细</label></a>
+									<a href="/family/public/index/Member/delete_member/member_no/{$member['member_no']}"><label>删除</label></a>	|
+									<a href="/family/public/index/Member/show_modify_member/member_no/{$member['member_no']}"><label>修改</label></a>	|
+									<a href="/family/public/index/Member/show_member_detial/member_no/{$member['member_no']}"><label>详细</label></a>
 								</td>
 							</tr>
 						{/volist}
