@@ -12,9 +12,9 @@
 					</button>
 					<a class="navbar-brand" href="#">家庭理财系统</a>
 				</div>
-				<form class="navbar-form navbar-left" role="search">
+				<form class="navbar-form navbar-left" role="search" method="post" action="/family/public/index/Search/search_member">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search" style="width:78%;display:inline;">
+						<input type="text" name="input" class="form-control" placeholder="搜索" style="width:78%;display:inline;">
 						<button type="submit" class="btn btn-default" style="width:20%;">提交</button>
 					</div>
 				</form>
@@ -36,17 +36,6 @@
 							<ul class="dropdown-menu">
 								<li><a href="/family/public/index/Member/show_member_list">成员列表</a></li>
 								<li><a href="/family/public/index/Member/show_add_member">添加成员</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								统计 <b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="/family/public/index/Chart/index">试试</a></li>
-								<li><a href="#">添加成员</a></li>
-								<li><a href="#">删除成员</a></li>
-								<li><a href="#">修改成员信息</a></li>
 							</ul>
 						</li>
 						<li class="dropdown">
